@@ -1,4 +1,5 @@
 *
+!/task-1
 !*.c
 !*.h
 !*.gitignore
