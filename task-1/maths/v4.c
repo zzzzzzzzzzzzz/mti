@@ -46,6 +46,6 @@ int main(int argc, char **argv) {
 		fprintf(stderr, "Unexpected symbol(s) \"%s\" in argument \"%s\"\n", endptr, argv[3]);
 		exit(-1);
 	}
-	fprintf(stdout, "%Lg\n", goldenSection(quantity));
+	fprintf(stdout, "%Lf\n", goldenSection(quantity));
 	return 0;
 }

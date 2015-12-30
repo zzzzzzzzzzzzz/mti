@@ -82,7 +82,7 @@ int main(int argc, char **argv) {
 		res = 10 * first;
 	}
 
-	fprintf(stdout, "%Lg\n", res);
+	fprintf(stdout, "%Lf\n", res);
 
 	return 0;
 }
