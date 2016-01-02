@@ -1,4 +1,8 @@
 *
+!*.sql
+!*.gnumeric
+!*.xml
+!*.pdf
 !*.c
 !*.h
 !*.gitignore
