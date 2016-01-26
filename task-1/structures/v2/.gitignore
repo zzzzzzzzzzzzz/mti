@@ -1,0 +1,8 @@
+*
+!*.cpp
+!*.c
+!*.h
+!*.gitignore
+!input
+!output
+!Makefile
