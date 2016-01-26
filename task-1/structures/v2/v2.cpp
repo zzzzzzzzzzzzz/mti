@@ -30,8 +30,7 @@ void saveToFile(std::list<struct record> *rules, const char* filename) {
 		exit(errno);
 	}
 	while (!rules->empty()) {
-		printf("%s\n", rules->back().from);
-		fwrite(rules->back().from, strlen(rules->back().from), 1, f);
+		fwrite(rules->back().from, strlen(rules->back().from)-1, 1, f);
 		fwrite("->", 2, 1, f);
 		fwrite(rules->back().to, strlen(rules->back().to), 1, f);
 		rules->pop_back(); 
@@ -84,9 +83,9 @@ void loadFromFile(std::list<struct record> *rules, const char* filename) {
 		struct record rec;
 		memset(&rec,0,sizeof(struct record));
 		strncpy(rec.from, buf, i);
+		strcat(rec.from, "\n");
 		strncpy(rec.to, &buf[i+2], strlen(&buf[i+2])+1);
 		saveRecord(rules, &rec);
-		memset(&rec, 0, i+1);
 	}
 	fclose(f);
 }
